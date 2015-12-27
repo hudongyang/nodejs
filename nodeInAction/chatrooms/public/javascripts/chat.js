@@ -11,7 +11,7 @@ Chat.prototype.sendMessage = function(room, text) {
 }; 
 
 Chat.prototype.changeRoom = function(room) {    
-    this.socket.emit('join', {        
+    this.socket.emit('join', {      
         newRoom: room    
     });
 }; 
@@ -33,7 +33,7 @@ Chat.prototype.processCommand = function(command) {
             break;          
         default:              
             message = 'Unrecognized command.';  //如果命令无法识别，返回错误消息           
-            
+
         break;      
     }      
 
